@@ -22,3 +22,10 @@ through proves the constructor one did
 the IoC container bit (ex 5) is really just the ApplicationContext itself - thats the container
 holding and wiring all this. nothing extra to write for it
 
+
+also did ex 9 (creating a spring boot application) as an extra - its in spring-boot-library/
+spent the whole of days 12-13 wiring beans by hand in xml, then ex9 is one @SpringBootApplication
+annotation and boot auto-configures the lot, web server, datasource, jpa. felt almost silly
+after the xml. made a Book entity + repository + a BookController with the crud endpoints, h2
+in memory. MockMvc test posts a book then gets it back.
+
