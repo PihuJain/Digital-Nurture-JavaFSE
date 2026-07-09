@@ -1,0 +1,30 @@
+package com.cognizant.account;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.web.servlet.MockMvc;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+// eureka.client.enabled=false here so the test doesnt sit around retrying
+// registration against a discovery server that isnt running during mvn test
+@SpringBootTest(properties = "eureka.client.enabled=false")
+@AutoConfigureMockMvc
+class AccountControllerTest {
+
+    @Autowired
+    private MockMvc mvc;
+
+    @Test
+    void getAccountReturnsDummyDataForAnyNumber() throws Exception {
+        mvc.perform(get("/accounts/00987987973432"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.number").value("00987987973432"))
+                .andExpect(jsonPath("$.type").value("savings"))
+                .andExpect(jsonPath("$.balance").value(234343));
+    }
+}
