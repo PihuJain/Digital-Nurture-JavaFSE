@@ -1,0 +1,16 @@
+.score-card {
+  border: 1px solid #999;
+  border-radius: 6px;
+  padding: 16px 20px;
+  width: 260px;
+  font-family: system-ui, sans-serif;
+}
+
+.score-card h2 {
+  margin-top: 0;
+}
+
+.average {
+  font-weight: bold;
+  color: #2a6f2a;
+}
