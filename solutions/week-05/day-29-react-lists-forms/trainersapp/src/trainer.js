@@ -1,0 +1,13 @@
+// plain class for one trainer record, handout calls it Trainer.js
+class Trainer {
+  constructor(trainerId, name, email, phone, technology, skills) {
+    this.trainerId = trainerId
+    this.name = name
+    this.email = email
+    this.phone = phone
+    this.technology = technology
+    this.skills = skills
+  }
+}
+
+export default Trainer
