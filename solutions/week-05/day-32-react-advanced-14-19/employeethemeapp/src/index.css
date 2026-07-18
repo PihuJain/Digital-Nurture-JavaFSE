@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.card.dark {
+  background: #222;
+  color: #eee;
+}
