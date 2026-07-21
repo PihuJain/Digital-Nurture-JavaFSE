@@ -1,0 +1,3 @@
+# ignore any log file and the whole log folder
+*.log
+log/
