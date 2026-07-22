@@ -1,0 +1,5 @@
+# ignore any log file and the whole log folder
+*.log
+log/
+# merge tools leave .orig backups behind, dont want those tracked
+*.orig

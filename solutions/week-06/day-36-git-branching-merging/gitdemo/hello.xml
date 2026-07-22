@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<greeting>
+  <message>hello from master and the GitWork branch</message>
+  <author>pihu</author>
+</greeting>
